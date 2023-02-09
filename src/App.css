@@ -1,0 +1,19 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+.App {
+  background-color: lightgrey;
+  height: 100%;
+}
+
+.container {
+  padding: 50px 24px;
+}
+

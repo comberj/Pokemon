@@ -1,0 +1,63 @@
+.pokemon-deck__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  height: auto;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pokemon-deck_button__container{
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-deck_save__button{
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size:1.25rem;
+  background-color: #5668c7;
+  color: white;
+  margin: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out
+}
+
+.saved {
+  background-color: rgb(21, 111, 21);
+}
+
+.pokemon-deck_save__button:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.pokemon-deck__tip__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+@media (max-width: 1200px) {
+  .pokemon-deck__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pokemon-deck__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pokemon-deck__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
