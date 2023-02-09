@@ -10,6 +10,10 @@ Follow the [instructions document](./INSTRUCTIONS.md) provided.
 
 In the project directory, you can run:
 
+### `npm ci`
+
+Installs the dependencies required for the app
+
 ### `npm start`
 
 Runs the app in the development mode.\
