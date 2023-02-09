@@ -81,10 +81,3 @@
 > We need a place to host images
 
 - a CDN, like AWS CloudFront, would be vital here to ensure fast delivery of images across the globe. This could naturally integrate with other AWS tools like AWS s3 buckets, ensuring easy storage and management.
-
-
-## Other notes && considerations
-
-- To remove a card from your deck, simply click on it again. It should be removed.
-- Cards should be tabbable, and hitting either `Space` or `Enter` should function just like clicking a card. This is to ensure full keyboard accessibility. 
-- The app and components should scale well to mobile screens, although more can be done here to improve the experience.
