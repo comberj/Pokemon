@@ -6,5 +6,5 @@ export const eventNames = {
 };
 
 export const localStorageKeys = {
-  POKEMON_DECK_1: 'POKEMON_DECK_1',
+  POKEMON_DECK: 'POKEMON_DECK',
 }

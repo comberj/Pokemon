@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { eventNames } from '../../constants';
 
-import './Toaster.css';
+import './Toaster.scss';
 
 const Toaster: React.FC = () => {
 

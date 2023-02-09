@@ -5,7 +5,7 @@ import { Pokemon } from '../../types/Pokemon';
 import { eventNames, localStorageKeys } from '../../constants';
 import PokemonCard from '../PokemonCard/PokemonCard';
 
-import './PokemonDeck.css';
+import './PokemonDeck.scss';
 
 const PokemonDeck: React.FC = () => {
   const buttonStates = {
@@ -13,10 +13,10 @@ const PokemonDeck: React.FC = () => {
     saved: 'Saved!'
   }
 
-  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([])
-  const [deckSaving, setDeckSaving] = useState(false)
-  const [buttonText, setButtonText] = useState(buttonStates.default)
-  const hasPokemonSelected = selectedPokemon.length;
+  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon[]>([]);
+  const [deckSaving, setDeckSaving] = useState(false);
+  const [buttonText, setButtonText] = useState(buttonStates.default);
+  const hasPokemonSelected = !!selectedPokemon.length;
 
   useEffect(() => {
     const cardSelected = PubSub.subscribe(eventNames.CARD_SELECTED, (_msg: string, value: Pokemon) =>
@@ -33,7 +33,7 @@ const PokemonDeck: React.FC = () => {
   }, [selectedPokemon]);
 
   useEffect(() => {
-    const savedDeck = localStorage.getItem(localStorageKeys.POKEMON_DECK_1)
+    const savedDeck = localStorage.getItem(localStorageKeys.POKEMON_DECK);
     if (savedDeck) {
       setSelectedPokemon(JSON.parse(savedDeck));
     }
@@ -57,7 +57,7 @@ const PokemonDeck: React.FC = () => {
 
   const handleSaveDeck = () => {
     setDeckSaving(true);
-    localStorage.setItem(localStorageKeys.POKEMON_DECK_1, JSON.stringify(selectedPokemon));
+    localStorage.setItem(localStorageKeys.POKEMON_DECK, JSON.stringify(selectedPokemon));
     setButtonText(buttonStates.saved);
 
     setTimeout(() => {
@@ -69,7 +69,7 @@ const PokemonDeck: React.FC = () => {
   return (
     <>
       {!hasPokemonSelected && (
-        <div className="pokemon-deck__tip__background">
+        <div className="pokemon-deck_tip__background">
           <h3>Click a pokemon to get started!</h3>
         </div>
       )}

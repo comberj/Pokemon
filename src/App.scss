@@ -8,9 +8,13 @@ body {
   height: 100%;
 }
 
-.App {
+.app {
   background-color: lightgrey;
   height: 100%;
+
+  &__header {
+    text-align: center;
+  }
 }
 
 .container {

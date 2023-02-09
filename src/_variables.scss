@@ -1,0 +1,17 @@
+
+// grid
+$grid-width: 1400px;
+
+// screen sizes
+$screen-large: 1200px;
+$screen-medium: 768px;
+$screen-small: 576px;
+
+// colors
+$generic-gold: #deac19;
+
+// borders
+$fire-red: linear-gradient(to bottom, rgb(255, 119, 0), rgb(230, 169, 107)) border-box;
+$grass-green: linear-gradient(to bottom, rgb(12, 120, 50), rgb(110, 151, 129)) border-box;
+$water-blue: linear-gradient(to bottom, rgb(14, 12, 120), rgb(149, 145, 185)) border-box;
+$bug-purple: linear-gradient(to bottom, rgb(120, 12, 91), rgb(173, 170, 201)) border-box;

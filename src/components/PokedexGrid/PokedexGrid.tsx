@@ -2,7 +2,7 @@ import React from 'react';
 import { Pokemon } from '../../types/Pokemon';
 import PokemonCard from '../PokemonCard/PokemonCard';
 
-import './PokedexGrid.css';
+import './PokedexGrid.scss';
 
 interface PokedexGridProps {
   data: Pokemon[];

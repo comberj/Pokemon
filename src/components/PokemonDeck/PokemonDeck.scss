@@ -1,0 +1,52 @@
+@import "../../_variables.scss";
+@import "../../_mixins.scss";
+
+.pokemon-deck {
+  &__container {
+    @include grid-properties;
+
+    max-width: 1200px;
+
+    @media (max-width: $screen-large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: $screen-medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: $screen-small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &_button__container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 10px solid #5668c7;
+  }
+  
+  &_save__button{
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size:1.25rem;
+    background-color: #5668c7;
+    color: white;
+    margin: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out
+  }
+
+  &_tip__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+}
+
+.saved {
+  background-color: rgb(21, 111, 21);
+}

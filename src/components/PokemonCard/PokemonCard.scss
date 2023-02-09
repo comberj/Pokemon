@@ -1,0 +1,90 @@
+@import "../../_variables.scss";
+
+.card {
+  &__container {
+    border: 3px solid $generic-gold;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 4px 4px 4px 0px rgb(158, 149, 149);
+    cursor: pointer;
+    margin: 0 auto;
+    width: 225px;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: white;
+  
+    &:hover {
+      box-shadow: 4px 4px 4px 4px rgb(158 149 149);
+    }
+
+    &:focus {
+      box-shadow: 11px 12px 4px 0px rgb(158, 149, 149);
+    }
+  }
+
+  &-sprite__container {
+    display: flex;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 70px;
+    margin: auto;
+    border: 8px solid $generic-gold;
+  }
+
+  &-name__container {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  &-footer__container {
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-type__image {
+    height: 40px;
+  }
+
+  &-type__container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &-type__item {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+%card-sprites {
+  border-radius: 1em;
+  border: 6px solid transparent;
+}
+
+.fire {
+  @extend %card-sprites;
+  background: linear-gradient(white, white) padding-box,
+              $fire-red;
+}
+
+.grass {
+  @extend %card-sprites;
+  background: linear-gradient(white, white) padding-box,
+              $grass-green;
+}
+
+.water {
+  @extend %card-sprites;
+  background: linear-gradient(white, white) padding-box,
+              $water-blue;
+}
+
+.bug {
+  @extend %card-sprites;
+  background: linear-gradient(white, white) padding-box,
+              $bug-purple;
+}

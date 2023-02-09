@@ -1,0 +1,9 @@
+@mixin grid-properties {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 3rem;
+  max-width: $grid-width;
+  margin: 0 auto;
+}

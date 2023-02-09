@@ -3,7 +3,7 @@ import { eventNames } from '../../constants';
 import { Pokemon } from '../../types/Pokemon';
 import PubSub from 'pubsub-js';
 
-import './PokemonCard.css';
+import './PokemonCard.scss';
 
 interface PokemonCardProps {
   pokemon: Pokemon;
@@ -22,13 +22,10 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, selected = false }) 
       handleCardClicked();
     }
   };
-  
-  const randomKeyGenerator = ():string => {
-    return (Math.random() + 1).toString(36).substring(7);
-  }
 
   return (
-    <div
+    <div  
+      draggable
       tabIndex={0}
       onKeyDown={handleOnKeyDown}
       onClick={handleCardClicked}
@@ -42,7 +39,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon, selected = false }) 
       </p>
       <div className="card-type__container">
         {pokemon.types.map(type => (
-          <div key={randomKeyGenerator()} className="card-type__item">
+          <div key={type} className="card-type__item">
             <img
               alt={type}
               className="card-type__image"
